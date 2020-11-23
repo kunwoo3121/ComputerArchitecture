@@ -71,3 +71,63 @@ ex) jal, jalr
 3) Immediate Operands : 상수 값을 나타내는 Operand
 ```
 
+* RISC-V의 Instruction format
+```
+프로그램은 바이너리로 인코딩된 많은 명령어로 이루어져있다.
+모든 RISC-V 명령어는 32bit의 길이를 가진다.
+총 6개의 format이 있다.
+
+1) R-format  : 3개의 register operand를 받는 명령어
+2) I-format  : immediate operand를 받는 명령어 또는 load 명령어
+3) S-format  : store 명령어
+4) SB-format : Conditional branch instruction
+5) U-format  : immediate의 상위 20비트를 다루는 명령어
+6) UJ-format : Unconditional branch instruction
+```
+
+* R-format
+```
+funct7 / rs2 / rs1 / funct3 / rd / opcode ( 7 / 5 / 5 / 3 / 5 / 7 bit )
+
+opcode : 명령어의 동작 내용
+rd : 목적지 register
+rs1 : 첫번째 source register
+rs2 : 두번째 source register
+funct3, funct7 : 명령어의 상세 내용 
+```
+
+* I-format
+```
+immediate / rs1 / funct3 / rd / opcode ( 12 / 5 / 3 / 5 / 7 bit )
+```
+
+* S-format
+```
+imm[11:5] / rs2 / rs1 / funct3 / imm[4:0] / opcode ( 7 / 5 / 5 / 3 / 5 / 7 bit )
+
+imm[11:5] : 12bit immediate의 상위 7bit
+imm[4:0]  : 12bit immediate의 하위 5bit
+```
+
+* U-format
+```
+imm[31:12] / rd / opcode ( 20 / 5 / 7 bit )
+
+imm[31:12] : immediate의 상위 20bit를 다룬다.
+```
+
+* SB-format
+```
+imm[12] / imm[10:5] / rs2 / rs1 / funct3 / imm[4:1] / imm[11] / opcode ( 1 / 6 / 5 / 5 / 3 / 5 / 1 / 7 bit ) 
+
+immediate[0]는 항상 0이다. 왜냐하면 모든 instruction의 주소는 짝수이기 때문에 저장할 필요가 없기 때문이다.
+이를 이용하여 더 큰 bit를 다룰 수 있는 것이다.
+```
+
+* UJ-format
+```
+imm[20] / imm[10:1] / imm[11] / imm[19:12] / rd / opcode ( 1 / 10 / 1 / 8 / 5 / 7 bit )
+```
+
+
+
