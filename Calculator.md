@@ -42,13 +42,13 @@ System Call을 이용하여 Console에 결과를 출력한다.
 
 ## 사칙 연산
 
-* 덧셈
+* 덧셈  
 ![7](https://user-images.githubusercontent.com/28796089/100013548-5b40d380-2e18-11eb-87a1-d6411233fe49.JPG)
 ```
 덧셈의 경우 add 명령어를 이용하면 된다.
 ```
 
-* 뺄셈
+* 뺄셈  
 ![8](https://user-images.githubusercontent.com/28796089/100013611-76134800-2e18-11eb-8221-259d92d5e537.JPG)
 ```
 2의 보수를 이용한 뺄셈을 한다.
