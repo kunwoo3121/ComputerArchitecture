@@ -145,3 +145,45 @@ ex) 0111 / 0010
 6) 4 bit 만큼 shift 되었으므로 종료 
    몫은 하위 4비트인 0011, 나머지는 상위 4비트인 0001이다.
 ```
+
+# Floating Point Number 
+소수를 나타내는 방법, 아주 작은 수나 매우 큰 수를 표현하기 위해 사용한다.
+
+* Binary number form
+```
+± 1.xxxxx....(2) * 2^y
+
+x : fraction, y : exponent 
+
+fraction을 저장하는 bit가 커질수록 숫자의 정확도가 증가하고
+exponent을 저장하는 bit가 커질수록 표현할 수 있는 수의 범위가 증가한다.
+```
+
+* Single Precision : 32bit
+```
+32bit로 나타내는 경우
+
+sign / exponent / fraction ( 1 / 8 / 23 bit )
+```
+
+* Double Precision : 64bit
+```
+64bit로 나타내는 경우
+
+sign / exponent / fraction ( 1 / 11 / 52 bit)
+
+훨씬 큰 bit를 fraction에 할당하여 정밀도가 크게 증가한다.
+```
+
+* IEEE 754 Floating-Point Format
+```
+1) 부호 비트가 0일때 양수, 1일때 음수를 나타낸다.
+
+2) Significand : 1 + Fraction
+
+3) Exponent : 실제 Exponent에 bias가 더해진 값이다.
+              bias는 single precision에서는 127
+              double precision에서는 1207이다.
+              
+              bias exponent를 사용하는 이유는 크기 비교의 방법을 단순화시키기 위해서이다.
+```
