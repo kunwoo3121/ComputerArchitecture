@@ -31,3 +31,10 @@ q를 입력받으면 콘솔에서 입력을 받는 것을 그만두고 프로그
 위와 같은 과정을 통해 콘솔을 통해 String을 입력받고 값을 레지스터에 저장한다.
 ```
 
+## 콘솔 출력하기
+![5](https://user-images.githubusercontent.com/28796089/100013359-10bf5700-2e18-11eb-8c14-8576ffc3d6cb.JPG)  
+![6](https://user-images.githubusercontent.com/28796089/100013360-1157ed80-2e18-11eb-94f5-a3b3359ce99a.JPG)
+```
+System Call을 이용하여 Console에 결과를 출력한다.
+나눗셈의 경우 나머지도 출력해야하므로 분기를 나눈다.
+```
