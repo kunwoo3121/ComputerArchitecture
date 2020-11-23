@@ -129,5 +129,45 @@ immediate[0]는 항상 0이다. 왜냐하면 모든 instruction의 주소는 짝
 imm[20] / imm[10:1] / imm[11] / imm[19:12] / rd / opcode ( 1 / 10 / 1 / 8 / 5 / 7 bit )
 ```
 
-* Addressing
+# Addressing
 
+* PC-relative addressing
+```
+PC = PC + { immediate + 뒤에 0을 하나 붙임 }
+모든 instruction의 주소는 짝수이기 때문에 마지막 자리는 0이여도 괜찮다.
+```
+
+* Branch Far away
+```
+branch instruction의 목적지는 이 명령어와 가까이 있다.
+하지만 매우 멀어지게 될 경우 ( 13 bit로 충족시키지 못할 때 ) 어셈블러가 code를 다시 쓴다.
+```
+
+# Procedure Calls
+```
+caller은 procedure을 호출, procedure은 callee
+caller은 callee에게 data를 준다. ( argument )
+callee는 caller에게 data를 준다. ( result )
+```
+
+* Procedure execution
+```
+1) Argument를 Procedure가 접근할 수 있는 곳에 둔다.
+2) Procedure에게 Control을 준다.
+3) 명령어 시행
+4) 결과를 caller가 접근할 수 있는 곳에 둔다.
+5) Pointer을 기존 위치로 옮김 ( return )
+
+x10 ~ x17 : 패러미터나 결과값을 받는 데 사용되는 레지스터
+x1 : return 시 돌아오는 주소를 저장하는 레지스터
+
+procedure을 call할 때는 jal 명령어, caller로 돌아갈 때는 jalr 명령어를 사용한다.
+```
+
+* Using Stack
+```
+레지스터는 매우 빨라서 최대한 활용하여야 한다.
+
+스택을 활용하여 레지스터의 값을 메모리에 저장하고 procedure가 끝이나면 다시 불러들인다.
+-> 레지스터의 값을 유지하여 procedure가 call 되었을 때 레지스터를 활용할 수 있게 한다.
+```
