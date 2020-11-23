@@ -25,7 +25,7 @@ q를 입력받으면 콘솔에서 입력을 받는 것을 그만두고 프로그
 
 - 의 경우 이것이 연산자인지 부호를 나타내는 것인지 판단해야하므로 그 과정도 포함시킨다.
 ```
-![3](https://user-images.githubusercontent.com/28796089/100013126-adcdc000-2e17-11eb-9a84-52b12f5caa49.JPG)
+![3](https://user-images.githubusercontent.com/28796089/100013126-adcdc000-2e17-11eb-9a84-52b12f5caa49.JPG)  
 ![4](https://user-images.githubusercontent.com/28796089/100013185-c342ea00-2e17-11eb-8284-0d67cd046eb5.JPG)
 ```
 위와 같은 과정을 통해 콘솔을 통해 String을 입력받고 값을 레지스터에 저장한다.
