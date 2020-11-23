@@ -36,5 +36,28 @@ q를 입력받으면 콘솔에서 입력을 받는 것을 그만두고 프로그
 ![6](https://user-images.githubusercontent.com/28796089/100013360-1157ed80-2e18-11eb-94f5-a3b3359ce99a.JPG)
 ```
 System Call을 이용하여 Console에 결과를 출력한다.
+
 나눗셈의 경우 나머지도 출력해야하므로 분기를 나눈다.
 ```
+
+## 사칙 연산
+
+* 덧셈
+![7](https://user-images.githubusercontent.com/28796089/100013548-5b40d380-2e18-11eb-87a1-d6411233fe49.JPG)
+```
+덧셈의 경우 add 명령어를 이용하면 된다.
+```
+
+* 뺄셈
+![8](https://user-images.githubusercontent.com/28796089/100013611-76134800-2e18-11eb-8221-259d92d5e537.JPG)
+```
+2의 보수를 이용한 뺄셈을 한다.
+
+2의 보수는 bit를 전부 바꾼 뒤 1을 더하면 된다.
+
+ex) + 2 = 0010, -2 = 1110
+
+bit를 바꾸기 위하여 XOR 연산을 이용하였다.
+```
+
+
