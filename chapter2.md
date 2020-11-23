@@ -5,7 +5,7 @@
 High-Level language program -> Assembly language program -> Binary machine language program
 ```
 
-* Instruction
+# Instruction
 ```
 하드웨어와 소프트웨어의 중간 인터페이스, 프로세서의 Operation을 기술해놓은 Command
 
@@ -71,7 +71,7 @@ ex) jal, jalr
 3) Immediate Operands : 상수 값을 나타내는 Operand
 ```
 
-* RISC-V의 Instruction format
+# RISC-V의 Instruction format
 ```
 프로그램은 바이너리로 인코딩된 많은 명령어로 이루어져있다.
 모든 RISC-V 명령어는 32bit의 길이를 가진다.
@@ -129,5 +129,5 @@ immediate[0]는 항상 0이다. 왜냐하면 모든 instruction의 주소는 짝
 imm[20] / imm[10:1] / imm[11] / imm[19:12] / rd / opcode ( 1 / 10 / 1 / 8 / 5 / 7 bit )
 ```
 
-
+* Addressing
 
